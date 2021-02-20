@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/building"
+    tools:context=".OnBoardingActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onBoarding_walkThrough_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/previous_btn_onBoarding_walkThrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_on_board_btn"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:text="get started"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/swipeTextview"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:textStyle="italic"-->
+<!--            android:text="swipe"-->
+<!--            android:textColor="@color/lightWhite"-->
+<!--            android:textSize="25sp" />-->
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/dots_indicator_onBoarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:dampingRatio="0.3"
+            app:dotsColor="@color/lightWhite"
+            app:dotsSize="12dp"
+            app:selectedDotColor="@color/white" />
+        <!--app:dotsStrokeColor="@color/white"
+                    app:dotsStrokeWidth="2dp"-->
+    </LinearLayout>
+
+
+</RelativeLayout>
