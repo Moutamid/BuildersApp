@@ -1,23 +1,28 @@
 package dev.moutamid.buildersapp;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-
 public class FragmentOnBoardingSpace extends Fragment {
+
+    private View view;
+
+//    public LinearLayout spaceLayout() {
+//
+//        return view.findViewById(R.id.textonboardingspace);
+//
+//    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_on_boarding_space, container, false);
+        view = inflater.inflate(R.layout.fragment_on_boarding_space, container, false);
 
 //        ImageView progress = view.findViewById(R.id.welcome_imageView);
 //

@@ -1,5 +1,6 @@
 package dev.moutamid.buildersapp;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
@@ -8,8 +9,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Scroller;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +21,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator;
 
 import java.lang.reflect.Field;
@@ -30,6 +34,11 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     private ViewPagerFragmentAdapter adapter;
     private ViewPager viewPager;
+
+//    private boolean space, vision, dream, logo = true;
+
+    private boolean onpagescrollend = true;
+    private boolean onpageselectedend = false;
 
     private Button getStartedBtn;
 //    private TextView swipeTextView;
@@ -46,6 +55,79 @@ public class OnBoardingActivity extends AppCompatActivity {
 //        swipeTextView = findViewById(R.id.swipeTextview);
 //        skipBtn = findViewById(R.id.skip_btn_onBoarding_walkThrough);
         getStartedBtn = findViewById(R.id.previous_btn_onBoarding_walkThrough);
+        getStartedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final RelativeLayout parentLayout = findViewById(R.id.parentLayoutOnBoarding);
+                final RelativeLayout registrationLayout = findViewById(R.id.registrationLayout_onboarding);
+                final LinearLayout dotsindicatorlayout = findViewById(R.id.dots_indicator_linearLayout_onBoarding);
+
+                viewPager.animate().alpha(0).setDuration(500).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        viewPager.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
+
+                dotsindicatorlayout.animate().alpha(0).setDuration(500).setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        dotsindicatorlayout.setVisibility(View.GONE);
+                        parentLayout.setBackgroundResource(R.drawable.building_blurred);
+
+                        YoYo.with(Techniques.FadeInUp).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                registrationLayout.setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                            }
+                        }).playOn(registrationLayout);
+
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).start();
+
+
+//                startActivity(new Intent(OnBoardingActivity.this, RegistrationActivity.class));
+            }
+        });
         dotsIndicator = findViewById(R.id.dots_indicator_onBoarding);
 //        nextTxt = findViewById(R.id.next_text_onBoarding_walkThrough);
 
@@ -151,10 +233,225 @@ public class OnBoardingActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float v, int i1) {
 
-                switch (position) {
+                if (onpagescrollend && position == 0) {
 
+//                        FragmentOnBoardingSpace boardingSpace = new FragmentOnBoardingSpace();
+//                        if (space)
+                    YoYo.with(Techniques.FadeInUp).delay(100).duration(900).onStart(new YoYo.AnimatorCallback() {
+                        @Override
+                        public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                            findViewById(R.id.textonboardingspace).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                        }
+                    }).playOn(findViewById(R.id.textonboardingspace));
+                    onpagescrollend = false;
+//                    switch (position) {
+//                        case 0:
+//                            getStartedBtn.setVisibility(View.GONE);
+//
+////                        FragmentOnBoardingSpace boardingSpace = new FragmentOnBoardingSpace();
+////                        if (space)
+//                            YoYo.with(Techniques.FadeInUp).delay(500).duration(700).onStart(new YoYo.AnimatorCallback() {
+//                                @Override
+//                                public void call(Animator animator) {
+//
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            findViewById(R.id.textonboardingspace).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+//
+//
+//                                }
+//                            }).playOn(findViewById(R.id.textonboardingspace));
+//
+//                            findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+//                            findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+//                            findViewById(R.id.visionLayout).setVisibility(View.GONE);
+////                        space = false;
+//                            break;
+//                        case 1:
+//                            getStartedBtn.setVisibility(View.GONE);
+////                        FragmentOnBoardingVision boardingvision = new FragmentOnBoardingVision();
+////                        if (vision)
+//                            YoYo.with(Techniques.FadeInUp).delay(500).duration(700).onStart(new YoYo.AnimatorCallback() {
+//                                @Override
+//                                public void call(Animator animator) {
+//
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            findViewById(R.id.visionLayout).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+//
+//
+//                                }
+//                            }).playOn(findViewById(R.id.visionLayout));
+////                        vision = false;
+//                            findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+//                            findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+//                            findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+//
+//                            break;
+//                        case 2:
+//                            // Page 3 (Past Papers)
+////
+////                        utils.changeStatusBarColor(ActivityMain.this, (R.color.yellow));
+////
+//                            // Page 2 (Video Lectures)
+////
+////                        utils.changeStatusBarColor(ActivityMain.this, (R.color.darkSkyBlue));
+//
+//                            // Showing previous Button
+//                            // Page 1 (Welcome)
+//
+////                        utils.changeStatusBarColor(ActivityMain.this, R.color.pinkish);
+//
+//                            // Hiding previous Button
+////                        FragmentOnBoardingDreams boardingDreams = new FragmentOnBoardingDreams();
+//
+////                        if (dream)
+//                            YoYo.with(Techniques.FadeInUp).delay(500).duration(700).onStart(new YoYo.AnimatorCallback() {
+//                                @Override
+//                                public void call(Animator animator) {
+//
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            findViewById(R.id.dreamslayout).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+//
+//
+//                                }
+//                            }).playOn(findViewById(R.id.dreamslayout));
+////                        dream = false;
+//                            findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+//                            findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+//                            findViewById(R.id.visionLayout).setVisibility(View.GONE);
+//                            getStartedBtn.setVisibility(View.GONE);
+//                            break;
+//                        // Animately change text of Next Button
+////                        nextTxt.setText("Next");
+//                        case 3:
+//                            // Page 3 (Guides and More)
+//
+////                        utils.changeStatusBarColor(ActivityMain.this, (R.color.indigo));
+//
+//                            // Showing previous Button
+////                        FragmentOnBoardingLogoFinal boardingLogo = new FragmentOnBoardingLogoFinal();
+////                        if (logo)
+//                            YoYo.with(Techniques.FadeInUp).delay(500).duration(700).onStart(new YoYo.AnimatorCallback() {
+//                                @Override
+//                                public void call(Animator animator) {
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            findViewById(R.id.logoonboarding).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+//
+//                                }
+//                            }).playOn(findViewById(R.id.logoonboarding));
+//
+//                            findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+//                            findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+//                            findViewById(R.id.visionLayout).setVisibility(View.GONE);
+////                        logo = false;
+//                            YoYo.with(Techniques.FadeIn).delay(500).duration(700).onStart(new YoYo.AnimatorCallback() {
+//                                @Override
+//                                public void call(Animator animator) {
+//
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            getStartedBtn.setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+//
+//
+//                                }
+//                            }).playOn(getStartedBtn);
+////                        swipeTextView.setVisibility(View.GONE);
+//
+//                            // Animately change text of Next Button
+////                        animateNextBtn();
+//
+//                            onpagescrollend = false;
+//                            onpageselectedend = true;
+//                            break;
+//                    }
+
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+//                if (onpageselectedend) {
+
+                switch (position) {
                     case 0:
+//                            onpagescrollend = true;
+//                            onpageselectedend = false;
+
+                        getStartedBtn.setVisibility(View.GONE);
+
+//                        FragmentOnBoardingSpace boardingSpace = new FragmentOnBoardingSpace();
+//                        if (space)
+                        YoYo.with(Techniques.FadeInUp).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                findViewById(R.id.textonboardingspace).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                            }
+                        }).playOn(findViewById(R.id.textonboardingspace));
+
+                        findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+                        findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+                        findViewById(R.id.visionLayout).setVisibility(View.GONE);
+//                        space = false;
+                        break;
                     case 1:
+                        getStartedBtn.setVisibility(View.GONE);
+//                        FragmentOnBoardingVision boardingvision = new FragmentOnBoardingVision();
+//                        if (vision)
+                        YoYo.with(Techniques.FadeInUp).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                findViewById(R.id.visionLayout).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                            }
+                        }).playOn(findViewById(R.id.visionLayout));
+//                        vision = false;
+                        findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+                        findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+                        findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+
+                        break;
                     case 2:
                         // Page 3 (Past Papers)
 //
@@ -170,33 +467,78 @@ public class OnBoardingActivity extends AppCompatActivity {
 //                        utils.changeStatusBarColor(ActivityMain.this, R.color.pinkish);
 
                         // Hiding previous Button
+//                        FragmentOnBoardingDreams boardingDreams = new FragmentOnBoardingDreams();
+
+//                        if (dream)
+                        YoYo.with(Techniques.FadeInUp).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                findViewById(R.id.dreamslayout).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                            }
+                        }).playOn(findViewById(R.id.dreamslayout));
+//                        dream = false;
+                        findViewById(R.id.logoonboarding).setVisibility(View.GONE);
+                        findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+                        findViewById(R.id.visionLayout).setVisibility(View.GONE);
                         getStartedBtn.setVisibility(View.GONE);
-//                        swipeTextView.setVisibility(View.VISIBLE);
-
                         break;
-
                     // Animately change text of Next Button
 //                        nextTxt.setText("Next");
-
                     case 3:
                         // Page 3 (Guides and More)
 
 //                        utils.changeStatusBarColor(ActivityMain.this, (R.color.indigo));
 
                         // Showing previous Button
-                        getStartedBtn.setVisibility(View.VISIBLE);
+//                        FragmentOnBoardingLogoFinal boardingLogo = new FragmentOnBoardingLogoFinal();
+//                        if (logo)
+                        YoYo.with(Techniques.FadeInUp).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                findViewById(R.id.logoonboarding).setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+                            }
+                        }).playOn(findViewById(R.id.logoonboarding));
+
+                        findViewById(R.id.dreamslayout).setVisibility(View.GONE);
+                        findViewById(R.id.textonboardingspace).setVisibility(View.GONE);
+                        findViewById(R.id.visionLayout).setVisibility(View.GONE);
+//                        logo = false;
+                        YoYo.with(Techniques.FadeIn).duration(900).onStart(new YoYo.AnimatorCallback() {
+                            @Override
+                            public void call(Animator animator) {
+
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+                                getStartedBtn.setVisibility(View.VISIBLE);
+//                                        }
+//                                    }, 500);
+
+
+                            }
+                        }).playOn(getStartedBtn);
 //                        swipeTextView.setVisibility(View.GONE);
 
                         // Animately change text of Next Button
 //                        animateNextBtn();
-
                         break;
                 }
-            }
 
-            @Override
-            public void onPageSelected(int i) {
-
+//                }
             }
 
             @Override

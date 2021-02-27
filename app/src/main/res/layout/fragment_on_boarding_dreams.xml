@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:id="@+id/dreamslayout"
+        android:visibility="invisible"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="130dp"
         android:layout_marginEnd="50dp"
