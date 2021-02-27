@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:visibility="gone"
+
         android:layout_marginTop="40dp">
 
         <ImageView
@@ -53,7 +53,7 @@
                     android:layout_toEndOf="@id/profileiconet"
                     android:layout_toRightOf="@id/profileiconet"
                     android:background="@drawable/bg_registration_edittext"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="monospace"
                     android:hint="Enter Username"
                     android:inputType="textPersonName"
                     android:paddingStart="25dp"
@@ -98,6 +98,7 @@
                     android:paddingEnd="25dp"
                     android:paddingRight="25dp"
                     android:paddingBottom="10dp"
+                    android:fontFamily="monospace"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
                     android:textStyle="italic" />
@@ -119,6 +120,7 @@
                     android:background="@drawable/bg_on_board_btn"
                     android:paddingStart="20dp"
                     android:paddingLeft="20dp"
+                    android:fontFamily="serif-monospace"
                     android:paddingEnd="20dp"
                     android:paddingRight="20dp"
                     android:text="sign in"
@@ -134,6 +136,7 @@
                     android:background="@drawable/bg_on_board_btn_white"
                     android:paddingStart="20dp"
                     android:paddingLeft="20dp"
+                    android:fontFamily="serif-monospace"
                     android:paddingEnd="20dp"
                     android:paddingRight="20dp"
                     android:text="sign up"
