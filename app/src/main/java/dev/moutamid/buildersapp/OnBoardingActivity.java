@@ -125,7 +125,7 @@ public class OnBoardingActivity extends AppCompatActivity {
                 }).start();
 
 
-//                startActivity(new Intent(OnBoardingActivity.this, RegistrationActivity.class));
+//                startActivity(new Intent(OnBoardingActivity.this, HomeActivity.class));
             }
         });
         dotsIndicator = findViewById(R.id.dots_indicator_onBoarding);
