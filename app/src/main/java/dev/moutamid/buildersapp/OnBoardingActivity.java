@@ -2,6 +2,7 @@ package dev.moutamid.buildersapp;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -52,8 +53,14 @@ public class OnBoardingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_on_boarding);
 
         viewPager = findViewById(R.id.onBoarding_walkThrough_view_pager);
-//        swipeTextView = findViewById(R.id.swipeTextview);
-//        skipBtn = findViewById(R.id.skip_btn_onBoarding_walkThrough);
+
+        findViewById(R.id.loginBtnRegistration).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OnBoardingActivity.this, HomeActivity.class));
+            }
+        });
+
         getStartedBtn = findViewById(R.id.previous_btn_onBoarding_walkThrough);
         getStartedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
