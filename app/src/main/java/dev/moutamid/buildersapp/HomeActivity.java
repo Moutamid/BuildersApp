@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 }
-                recreate();
+//                recreate();
 
             }
         });
