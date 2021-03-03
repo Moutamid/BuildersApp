@@ -1,5 +1,8 @@
 package dev.moutamid.buildersapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
 
         initRecyclerView(R.id.recyclerviewHome1);
         initRecyclerView(R.id.recyclerviewHome2);

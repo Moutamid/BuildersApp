@@ -3,6 +3,7 @@ package dev.moutamid.buildersapp;
 import android.animation.Animator;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -57,7 +58,12 @@ public class OnBoardingActivity extends AppCompatActivity {
         findViewById(R.id.loginBtnRegistration).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OnBoardingActivity.this, HomeActivity.class));
+                SharedPreferences sp = getSharedPreferences("dev.moutamid.buildersapp", Context.MODE_PRIVATE);
+                sp.edit().putString("isLogin", "yes").apply();
+                finish();
+                Intent intent = new Intent(OnBoardingActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 
