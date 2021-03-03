@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_main_screen"
+    tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/groove_4x_1"
@@ -39,10 +41,10 @@
 
                 <View
                     android:id="@+id/line_1"
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
                 <TextView
                     android:id="@+id/news"
@@ -63,10 +65,10 @@
                     android:layout_margin="15dp" />
 
                 <View
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
             </LinearLayout>
 
@@ -86,10 +88,10 @@
 
                 <View
 
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
                 <TextView
 
@@ -110,10 +112,10 @@
                     android:layout_margin="15dp" />
 
                 <View
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
             </LinearLayout>
 
@@ -133,10 +135,10 @@
 
                 <View
 
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
                 <TextView
 
@@ -157,10 +159,10 @@
                     android:layout_margin="15dp" />
 
                 <View
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
             </LinearLayout>
 
@@ -180,10 +182,10 @@
 
                 <View
 
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
                 <TextView
 
@@ -204,10 +206,10 @@
                     android:layout_margin="15dp" />
 
                 <View
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
             </LinearLayout>
 
@@ -227,10 +229,10 @@
 
                 <View
 
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
                 <TextView
 
@@ -251,10 +253,10 @@
                     android:layout_margin="15dp" />
 
                 <View
-                    android:layout_width="414dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/line_1" />
+                    android:background="@drawable/bg_line" />
 
             </LinearLayout>
 
@@ -273,14 +275,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
-        android:src="@drawable/ic_night_black" />
+        android:src="@drawable/ic_night_mode" />
 
     <RelativeLayout
         android:id="@+id/rectangle_2"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bg_mainb_bottom_white"
+        android:background="@drawable/bg_mainb_bottom"
         android:elevation="10dp">
 
         <ImageView
@@ -292,14 +294,14 @@
             android:layout_toStartOf="@id/middlebtn"
             android:id="@+id/homeiconimage"
             android:layout_toLeftOf="@id/middlebtn"
-            android:src="@drawable/ic_home_black" />
+            android:src="@drawable/ic_home" />
 
         <ImageView
             android:id="@+id/middlebtn"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_search_black" />
+            android:src="@drawable/ic_search" />
 
         <ImageView
             android:layout_width="35dp"
@@ -310,7 +312,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/middlebtn"
             android:layout_toRightOf="@id/middlebtn"
-            android:src="@drawable/ic_profile_black" />
+            android:src="@drawable/ic_profile_home" />
 
     </RelativeLayout>
 

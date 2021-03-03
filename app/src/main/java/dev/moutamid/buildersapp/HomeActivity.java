@@ -38,20 +38,20 @@ public class HomeActivity extends AppCompatActivity {
         homeimage = findViewById(R.id.homeiconimage);
         nightmodeimage = findViewById(R.id.nightmodeimage);
 
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-
-            middleImage.setImageResource(R.drawable.ic_search_white);
-            profileimage.setImageResource(R.drawable.ic_profile_white);
-            homeimage.setImageResource(R.drawable.ic_home_white);
-            middleImage.setImageResource(R.drawable.ic_search_white);
-            nightmodeimage.setImageResource(R.drawable.ic_night_mode_white);
-        } else {
-            middleImage.setImageResource(R.drawable.ic_search_black);
-            profileimage.setImageResource(R.drawable.ic_profile_black);
-            homeimage.setImageResource(R.drawable.ic_home_black);
-            middleImage.setImageResource(R.drawable.ic_search_black);
-            nightmodeimage.setImageResource(R.drawable.ic_night_black);
-        }
+//        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+//
+//            middleImage.setImageResource(R.drawable.ic_search_white);
+//            profileimage.setImageResource(R.drawable.ic_profile_white);
+//            homeimage.setImageResource(R.drawable.ic_home_white);
+//            middleImage.setImageResource(R.drawable.ic_search_white);
+//            nightmodeimage.setImageResource(R.drawable.ic_night_mode_white);
+//        } else {
+//            middleImage.setImageResource(R.drawable.ic_search_black);
+//            profileimage.setImageResource(R.drawable.ic_profile_black);
+//            homeimage.setImageResource(R.drawable.ic_home_black);
+//            middleImage.setImageResource(R.drawable.ic_search_black);
+//            nightmodeimage.setImageResource(R.drawable.ic_night_black);
+//        }
 
         nightmodeimage.setOnClickListener(new View.OnClickListener() {
             @Override
