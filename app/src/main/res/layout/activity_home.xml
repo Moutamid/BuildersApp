@@ -269,6 +269,7 @@
     <ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:id="@+id/nightmodeimage"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
@@ -289,6 +290,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@id/middlebtn"
+            android:id="@+id/homeiconimage"
             android:layout_toLeftOf="@id/middlebtn"
             android:src="@drawable/ic_home_black" />
 
@@ -302,6 +304,7 @@
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:id="@+id/profileiconimage"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"

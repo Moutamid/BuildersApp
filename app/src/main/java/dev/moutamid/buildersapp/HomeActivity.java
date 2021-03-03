@@ -5,9 +5,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +32,40 @@ public class HomeActivity extends AppCompatActivity {
         initRecyclerView(R.id.recyclerviewHome4);
         initRecyclerView(R.id.recyclerviewHome5);
 
+        ImageView middleImage, profileimage, homeimage, nightmodeimage;
+        middleImage = findViewById(R.id.middlebtn);
+        profileimage = findViewById(R.id.profileiconimage);
+        homeimage = findViewById(R.id.homeiconimage);
+        nightmodeimage = findViewById(R.id.nightmodeimage);
+
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+
+            middleImage.setImageResource(R.drawable.ic_search_white);
+            profileimage.setImageResource(R.drawable.ic_profile_white);
+            homeimage.setImageResource(R.drawable.ic_home_white);
+            middleImage.setImageResource(R.drawable.ic_search_white);
+            nightmodeimage.setImageResource(R.drawable.ic_night_mode_white);
+        } else {
+            middleImage.setImageResource(R.drawable.ic_search_black);
+            profileimage.setImageResource(R.drawable.ic_profile_black);
+            homeimage.setImageResource(R.drawable.ic_home_black);
+            middleImage.setImageResource(R.drawable.ic_search_black);
+            nightmodeimage.setImageResource(R.drawable.ic_night_black);
+        }
+
+        nightmodeimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                recreate();
+
+            }
+        });
     }
 
     private void initRecyclerView(int Id) {
