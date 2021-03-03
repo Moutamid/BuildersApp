@@ -5,67 +5,263 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/groove_4x_1"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_logo_green" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:paddingBottom="55dp"
+        android:layout_below="@id/groove_4x_1">
 
-        <ImageView
-            android:id="@+id/groove_4x_1"
-            android:layout_width="59dp"
-            android:layout_height="54dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_logo_green" />
-
-        <View
-            android:id="@+id/rectangle_3"
-            android:layout_width="246dp"
-            android:layout_height="151dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rectangle_3"
-            android:elevation="10dp" />
-
-        <View
-            android:id="@+id/line_1"
-            android:layout_width="414dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/line_1" />
-
-        <TextView
-            android:id="@+id/news"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="NEWS"
-            android:textSize="30sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerviewHome"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp" />
+            android:layout_below="@id/groove_4x_1"
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="414dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/line_1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <View
-            android:id="@+id/rectangle_5"
-            android:layout_width="347dp"
-            android:layout_height="234dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_3"
-            android:elevation="10dp" />
+                <View
+                    android:id="@+id/rectangle_3"
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="10dp" />
 
-    </LinearLayout>
+                <View
+                    android:id="@+id/line_1"
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+                <TextView
+                    android:id="@+id/news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewHome1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp" />
+
+                <View
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="10dp" />
+
+                <View
+
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewHome2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp" />
+
+                <View
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="10dp" />
+
+                <View
+
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewHome3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp" />
+
+                <View
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="10dp" />
+
+                <View
+
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewHome4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp" />
+
+                <View
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="10dp" />
+
+                <View
+
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="NEWS"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewHome5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp" />
+
+                <View
+                    android:layout_width="414dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/line_1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <ImageView
         android:layout_width="16dp"
@@ -73,7 +269,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_lock" />
+        android:src="@drawable/ic_night_black" />
 
     <RelativeLayout
         android:id="@+id/rectangle_2"
@@ -91,14 +287,14 @@
             android:layout_centerVertical="true"
             android:layout_toStartOf="@id/middlebtn"
             android:layout_toLeftOf="@id/middlebtn"
-            android:src="@drawable/ic_lock" />
+            android:src="@drawable/ic_home_black" />
 
         <ImageView
             android:id="@+id/middlebtn"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_lock" />
+            android:src="@drawable/ic_search_black" />
 
         <ImageView
             android:layout_width="15dp"
@@ -108,7 +304,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/middlebtn"
             android:layout_toRightOf="@id/middlebtn"
-            android:src="@drawable/ic_lock" />
+            android:src="@drawable/ic_profile_black" />
 
     </RelativeLayout>
 

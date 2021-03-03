@@ -17,44 +17,27 @@ public class HomeActivity extends AppCompatActivity {
     private static final String TAG = "HomeActivity";
 
     private ArrayList<String> currentRequestsArrayList = new ArrayList<>();
-    private RecyclerView conversationRecyclerView;
-    private RecyclerViewAdapterMessages adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-        currentRequestsArrayList.add("");
-
-        initRecyclerView();
+        initRecyclerView(R.id.recyclerviewHome1);
+        initRecyclerView(R.id.recyclerviewHome2);
+        initRecyclerView(R.id.recyclerviewHome3);
+        initRecyclerView(R.id.recyclerviewHome4);
+        initRecyclerView(R.id.recyclerviewHome5);
 
     }
 
-    private void initRecyclerView() {
+    private void initRecyclerView(int Id) {
         Log.d(TAG, "initRecyclerView: ");
 
-        conversationRecyclerView = findViewById(R.id.recyclerviewHome);
+        RecyclerView conversationRecyclerView;
+        RecyclerViewAdapterMessages adapter;
+        conversationRecyclerView = findViewById(Id);
         adapter = new RecyclerViewAdapterMessages();
 
         LinearLayoutManager layoutManagerUserOwn = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
