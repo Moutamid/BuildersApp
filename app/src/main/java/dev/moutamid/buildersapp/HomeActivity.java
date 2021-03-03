@@ -81,16 +81,16 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull final ViewHolderRightMessage holder, int position) {
-            if (holder.getAdapterPosition() == currentRequestsArrayList.size()-1){
-                addLayout();
-            }
+//            if (holder.getAdapterPosition() == currentRequestsArrayList.size()-1){
+//                addLayout();
+//            }
         }
 
         @Override
         public int getItemCount() {
             if (currentRequestsArrayList == null)
                 return 0;
-            return currentRequestsArrayList.size();
+            return 1000;
         }
 
         public class ViewHolderRightMessage extends RecyclerView.ViewHolder {
@@ -100,12 +100,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         }
 
-        public void addLayout() {
-
-            currentRequestsArrayList.add("");
-            notifyItemInserted(currentRequestsArrayList.size() - 1);
-
-        }
+//        public void addLayout() {
+//
+//            currentRequestsArrayList.add("");
+//            notifyItemInserted(currentRequestsArrayList.size() - 1);
+//
+//        }
 
     }
 
