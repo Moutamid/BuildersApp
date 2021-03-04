@@ -48,8 +48,9 @@
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bg_mainb_bottom"
-        android:elevation="10dp">
+        android:background="@color/white"
+        android:outlineProvider="bounds"
+        android:elevation="20dp">
 
         <ImageView
             android:id="@+id/homeiconimage"

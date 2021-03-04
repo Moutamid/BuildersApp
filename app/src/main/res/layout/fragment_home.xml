@@ -64,13 +64,18 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <View
+            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                android:layout_width="246dp"
-                android:layout_height="151dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3"
-                android:elevation="10dp" />
+                <View
+                    android:layout_width="246dp"
+                    android:layout_height="151dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_3"
+                    android:elevation="15dp" />
+
+            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
 
             <View
 

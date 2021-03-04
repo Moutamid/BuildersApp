@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "dev.moutamid.buildersapp"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -47,6 +47,9 @@ dependencies {
 
     // RecyclerView Library
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    // SHADOW LIBRARY
+    implementation 'com.sdsmdg.harjot:materialshadows:1.2.5'
 
     // Glide Library
 //    implementation 'com.github.bumptech.glide:glide:4.7.1'

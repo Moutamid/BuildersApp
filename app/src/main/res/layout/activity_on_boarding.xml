@@ -79,7 +79,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_profile" />
+                    android:src="@drawable/ic_profile_home" />
 
 
                 <EditText
