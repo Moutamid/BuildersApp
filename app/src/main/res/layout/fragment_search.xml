@@ -60,7 +60,7 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="Results:"
-                android:textColor="@color/black"
+                android:textColor="@color/searchresulttext"
                 android:textSize="30sp" />
 
             <androidx.recyclerview.widget.RecyclerView
