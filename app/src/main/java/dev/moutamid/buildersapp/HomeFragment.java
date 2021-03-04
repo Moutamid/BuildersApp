@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-
 public class HomeFragment extends Fragment {
     private static final String TAG = "HomeFragment";
 
@@ -99,3 +98,4 @@ public class HomeFragment extends Fragment {
 
     }
 }
+

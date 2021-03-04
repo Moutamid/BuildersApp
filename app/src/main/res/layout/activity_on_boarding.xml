@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:visibility="gone">
+        >
 
         <ImageView
             android:id="@+id/logoonboarding1"
@@ -41,7 +41,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_lock" />
+                    android:src="@drawable/ic_profile_login" />
 
 
                 <EditText
@@ -79,7 +79,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_profile_home" />
+                    android:src="@drawable/ic_lock_login" />
 
 
                 <EditText

@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         ImageView middleImage, profileimage, homeimage, nightmodeimage;
         middleImage = findViewById(R.id.middlebtn);
         profileimage = findViewById(R.id.profileiconimage);
@@ -52,18 +53,34 @@ public class HomeActivity extends AppCompatActivity {
         middleImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                middleImage.setImageResource(R.drawable.ic_search_selected);
+                profileimage.setImageResource(R.drawable.ic_profile_unselected);
+                homeimage.setImageResource(R.drawable.ic_home_unselected);
+
                 viewPager.setCurrentItem(1);
             }
         });
         profileimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                middleImage.setImageResource(R.drawable.ic_search_unselected);
+                profileimage.setImageResource(R.drawable.ic_profile_selected);
+                homeimage.setImageResource(R.drawable.ic_home_unselected);
+
+
                 viewPager.setCurrentItem(2);
             }
         });
         homeimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                middleImage.setImageResource(R.drawable.ic_search_unselected);
+                profileimage.setImageResource(R.drawable.ic_profile_unselected);
+                homeimage.setImageResource(R.drawable.ic_home_selected);
+
                 viewPager.setCurrentItem(0);
             }
         });
@@ -77,7 +94,6 @@ public class HomeActivity extends AppCompatActivity {
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 }
-//                recreate();
 
             }
         });

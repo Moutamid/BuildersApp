@@ -25,12 +25,8 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_search, container, false);
-        initRecyclerView(R.id.recyclerviewHome1_search);
-        initRecyclerView(R.id.recyclerviewHome2_search);
-        initRecyclerView(R.id.recyclerviewHome3_search);
-        initRecyclerView(R.id.recyclerviewHome4_search);
-        initRecyclerView(R.id.recyclerviewHome5_search);
 
+        initRecyclerView(R.id.recyclerviewHome1_search);
 
         return view;
     }

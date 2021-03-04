@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -21,9 +22,7 @@
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3"
-                android:elevation="10dp"
-                android:outlineProvider="paddedBounds" />
+                android:background="@drawable/rectangle_3" />
 
             <View
                 android:id="@+id/line_1"
@@ -64,18 +63,22 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <!--            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                app:shadowOffsetX="15"-->
+            <!--                app:shadowOffsetY="30">-->
 
-                <View
-                    android:layout_width="246dp"
-                    android:layout_height="151dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rectangle_3"
-                    android:elevation="15dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="246dp"
+                android:layout_height="151dp"
+                android:layout_marginTop="15dp"
+                android:elevation="15dp"
+                app:cardBackgroundColor="#32CE62"
+                app:cardCornerRadius="37dp" />
 
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            <!--            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>-->
 
             <View
 
