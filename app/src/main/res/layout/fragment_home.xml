@@ -17,12 +17,13 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/rectangle_3"
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/porterImageview1"
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3" />
+                android:src="@color/grey"
+                app:siShape="@drawable/shape_rounded_rectangle" />
 
             <View
                 android:id="@+id/line_1"
@@ -70,13 +71,13 @@
             <!--                app:shadowOffsetX="15"-->
             <!--                app:shadowOffsetY="30">-->
 
-            <androidx.cardview.widget.CardView
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/porterImageview2"
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:elevation="15dp"
-                app:cardBackgroundColor="#32CE62"
-                app:cardCornerRadius="37dp" />
+                android:src="@color/grey"
+                app:siShape="@drawable/shape_rounded_rectangle" />
 
             <!--            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>-->
 
@@ -119,13 +120,13 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <View
-
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/porterImageview3"
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3"
-                android:elevation="10dp" />
+                android:src="@color/grey"
+                app:siShape="@drawable/shape_rounded_rectangle" />
 
             <View
 
@@ -166,13 +167,13 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <View
-
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/porterImageview4"
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3"
-                android:elevation="10dp" />
+                android:src="@color/grey"
+                app:siShape="@drawable/shape_rounded_rectangle" />
 
             <View
 
@@ -213,13 +214,13 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <View
-
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/porterImageview5"
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rectangle_3"
-                android:elevation="10dp" />
+                android:src="@color/grey"
+                app:siShape="@drawable/shape_rounded_rectangle" />
 
             <View
 

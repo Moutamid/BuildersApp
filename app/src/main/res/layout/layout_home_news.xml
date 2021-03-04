@@ -6,5 +6,6 @@
     android:layout_height="151dp"
     android:layout_gravity="start"
     android:layout_marginStart="20dp"
+    android:src="@color/grey"
     app:siShape="@drawable/shape_rounded_rectangle"
     app:siSquare="true" /><!--    android:background="@drawable/rectangle_4"-->

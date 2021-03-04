@@ -30,8 +30,6 @@ public class HomeFragment extends Fragment {
     private static final String TAG = "HomeFragment";
 
     private ArrayList<String> currentRequestsArrayList = new ArrayList<>();
-
-
     private View view;
     private Context context = getActivity();
 
@@ -46,6 +44,16 @@ public class HomeFragment extends Fragment {
         initRecyclerView(R.id.recyclerviewHome4);
         initRecyclerView(R.id.recyclerviewHome5);
 
+        PorterShapeImageView imageView1 = view.findViewById(R.id.porterImageview1);
+        PorterShapeImageView imageView2 = view.findViewById(R.id.porterImageview2);
+        PorterShapeImageView imageView3 = view.findViewById(R.id.porterImageview3);
+        PorterShapeImageView imageView4 = view.findViewById(R.id.porterImageview4);
+        PorterShapeImageView imageView5 = view.findViewById(R.id.porterImageview5);
+        new displayImageFromUrl(imageView1).execute();
+        new displayImageFromUrl(imageView2).execute();
+        new displayImageFromUrl(imageView3).execute();
+        new displayImageFromUrl(imageView4).execute();
+        new displayImageFromUrl(imageView5).execute();
 
         return view;
     }
@@ -140,10 +148,12 @@ public class HomeFragment extends Fragment {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            Glide.with(getActivity()).load(imageBitmap)
-                    .placeholder(R.drawable.rectangle_4)
-                    .into(imageView);
+            if (imageView != null && getActivity() != null) {
 
+                Glide.with(getActivity()).load(imageBitmap)
+                        .placeholder(R.drawable.rectangle_4)
+                        .into(imageView);
+            }
         }
     }
 
