@@ -1,6 +1,10 @@
 package dev.moutamid.buildersapp;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +16,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.github.siyamed.shapeimageview.mask.PorterShapeImageView;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
@@ -23,6 +34,7 @@ public class HomeFragment extends Fragment {
 
     private View view;
     private Context context = getActivity();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -70,9 +82,9 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull final ViewHolderRightMessage holder, int position) {
-//            if (holder.getAdapterPosition() == currentRequestsArrayList.size()-1){
-//                addLayout();
-//            }
+
+            new displayImageFromUrl(holder.newsImageView).execute();
+
         }
 
         @Override
@@ -84,8 +96,11 @@ public class HomeFragment extends Fragment {
 
         public class ViewHolderRightMessage extends RecyclerView.ViewHolder {
 
+            PorterShapeImageView newsImageView;
+
             public ViewHolderRightMessage(@NonNull View v) {
                 super(v);
+                newsImageView = v.findViewById(R.id.news_imageview_home);
             }
         }
 
@@ -97,5 +112,40 @@ public class HomeFragment extends Fragment {
 //        }
 
     }
+
+    private class displayImageFromUrl extends AsyncTask<Void, Void, Void> {
+
+        PorterShapeImageView imageView;
+        Bitmap imageBitmap;
+
+        public displayImageFromUrl(PorterShapeImageView imageView) {
+            this.imageView = imageView;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            try {
+                URL url = new URL("https://picsum.photos/200");
+                imageBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+
+            Glide.with(getActivity()).load(imageBitmap)
+                    .placeholder(R.drawable.rectangle_4)
+                    .into(imageView);
+
+        }
+    }
+
 }
 
