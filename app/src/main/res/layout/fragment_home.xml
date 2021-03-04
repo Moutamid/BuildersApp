@@ -22,7 +22,7 @@
                 android:layout_width="246dp"
                 android:layout_height="151dp"
                 android:layout_marginTop="15dp"
-                android:src="@color/grey"
+                android:src="@color/green"
                 app:siShape="@drawable/shape_rounded_rectangle" />
 
             <View
@@ -50,214 +50,214 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <!--            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_marginTop="15dp"-->
-            <!--                app:shadowOffsetX="15"-->
-            <!--                app:shadowOffsetY="30">-->
+<!--            &lt;!&ndash;            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_marginTop="15dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                app:shadowOffsetX="15"&ndash;&gt;-->
+<!--            &lt;!&ndash;                app:shadowOffsetY="30">&ndash;&gt;-->
 
-            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
-                android:id="@+id/porterImageview2"
-                android:layout_width="246dp"
-                android:layout_height="151dp"
-                android:layout_marginTop="15dp"
-                android:src="@color/grey"
-                app:siShape="@drawable/shape_rounded_rectangle" />
+<!--            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+<!--                android:id="@+id/porterImageview2"-->
+<!--                android:layout_width="246dp"-->
+<!--                android:layout_height="151dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:src="@color/grey"-->
+<!--                app:siShape="@drawable/shape_rounded_rectangle" />-->
 
-            <!--            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>-->
+<!--            &lt;!&ndash;            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>&ndash;&gt;-->
 
-            <View
+<!--            <View-->
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-            <TextView
+<!--            <TextView-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="NEWS"
-                android:textSize="30sp" />
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="NEWS"-->
+<!--                android:textSize="30sp" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerviewHome2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerviewHome2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
-                android:id="@+id/porterImageview3"
-                android:layout_width="246dp"
-                android:layout_height="151dp"
-                android:layout_marginTop="15dp"
-                android:src="@color/grey"
-                app:siShape="@drawable/shape_rounded_rectangle" />
+<!--            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+<!--                android:id="@+id/porterImageview3"-->
+<!--                android:layout_width="246dp"-->
+<!--                android:layout_height="151dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:src="@color/grey"-->
+<!--                app:siShape="@drawable/shape_rounded_rectangle" />-->
 
-            <View
+<!--            <View-->
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-            <TextView
+<!--            <TextView-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="NEWS"
-                android:textSize="30sp" />
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="NEWS"-->
+<!--                android:textSize="30sp" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerviewHome3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerviewHome3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
-                android:id="@+id/porterImageview4"
-                android:layout_width="246dp"
-                android:layout_height="151dp"
-                android:layout_marginTop="15dp"
-                android:src="@color/grey"
-                app:siShape="@drawable/shape_rounded_rectangle" />
+<!--            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+<!--                android:id="@+id/porterImageview4"-->
+<!--                android:layout_width="246dp"-->
+<!--                android:layout_height="151dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:src="@color/grey"-->
+<!--                app:siShape="@drawable/shape_rounded_rectangle" />-->
 
-            <View
+<!--            <View-->
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-            <TextView
+<!--            <TextView-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="NEWS"
-                android:textSize="30sp" />
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="NEWS"-->
+<!--                android:textSize="30sp" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerviewHome4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerviewHome4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
-                android:id="@+id/porterImageview5"
-                android:layout_width="246dp"
-                android:layout_height="151dp"
-                android:layout_marginTop="15dp"
-                android:src="@color/grey"
-                app:siShape="@drawable/shape_rounded_rectangle" />
+<!--            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+<!--                android:id="@+id/porterImageview5"-->
+<!--                android:layout_width="246dp"-->
+<!--                android:layout_height="151dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:src="@color/grey"-->
+<!--                app:siShape="@drawable/shape_rounded_rectangle" />-->
 
-            <View
+<!--            <View-->
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-            <TextView
+<!--            <TextView-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="NEWS"
-                android:textSize="30sp" />
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="NEWS"-->
+<!--                android:textSize="30sp" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerviewHome5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerviewHome5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_line" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/bg_line" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="55dp" />
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="55dp" />-->
 
     </LinearLayout>
 

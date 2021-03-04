@@ -39,21 +39,21 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
         initRecyclerView(R.id.recyclerviewHome1);
-        initRecyclerView(R.id.recyclerviewHome2);
-        initRecyclerView(R.id.recyclerviewHome3);
-        initRecyclerView(R.id.recyclerviewHome4);
-        initRecyclerView(R.id.recyclerviewHome5);
+//        initRecyclerView(R.id.recyclerviewHome2);
+//        initRecyclerView(R.id.recyclerviewHome3);
+//        initRecyclerView(R.id.recyclerviewHome4);
+//        initRecyclerView(R.id.recyclerviewHome5);
 
-        PorterShapeImageView imageView1 = view.findViewById(R.id.porterImageview1);
-        PorterShapeImageView imageView2 = view.findViewById(R.id.porterImageview2);
-        PorterShapeImageView imageView3 = view.findViewById(R.id.porterImageview3);
-        PorterShapeImageView imageView4 = view.findViewById(R.id.porterImageview4);
-        PorterShapeImageView imageView5 = view.findViewById(R.id.porterImageview5);
-        new displayImageFromUrl(imageView1).execute();
-        new displayImageFromUrl(imageView2).execute();
-        new displayImageFromUrl(imageView3).execute();
-        new displayImageFromUrl(imageView4).execute();
-        new displayImageFromUrl(imageView5).execute();
+//        PorterShapeImageView imageView1 = view.findViewById(R.id.porterImageview1);
+//        PorterShapeImageView imageView2 = view.findViewById(R.id.porterImageview2);
+//        PorterShapeImageView imageView3 = view.findViewById(R.id.porterImageview3);
+//        PorterShapeImageView imageView4 = view.findViewById(R.id.porterImageview4);
+//        PorterShapeImageView imageView5 = view.findViewById(R.id.porterImageview5);
+//        new displayImageFromUrl(imageView1).execute();
+//        new displayImageFromUrl(imageView2).execute();
+//        new displayImageFromUrl(imageView3).execute();
+//        new displayImageFromUrl(imageView4).execute();
+//        new displayImageFromUrl(imageView5).execute();
 
         return view;
     }
