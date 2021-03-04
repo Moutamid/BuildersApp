@@ -38,13 +38,14 @@ public class HomeActivity extends AppCompatActivity {
 
     private OnBoardingActivity.ViewPagerFragmentAdapter adapter;
     private ViewPager viewPager;
+    private ImageView middleImage, profileimage, homeimage, nightmodeimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ImageView middleImage, profileimage, homeimage, nightmodeimage;
+
         middleImage = findViewById(R.id.middlebtn);
         profileimage = findViewById(R.id.profileiconimage);
         homeimage = findViewById(R.id.homeiconimage);
@@ -122,7 +123,23 @@ public class HomeActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float v, int i1) {
-
+                switch (position){
+                    case 0:
+                        middleImage.setImageResource(R.drawable.ic_search_unselected);
+                        profileimage.setImageResource(R.drawable.ic_profile_unselected);
+                        homeimage.setImageResource(R.drawable.ic_home_selected);
+                        break;
+                    case 1:
+                        middleImage.setImageResource(R.drawable.ic_search_selected);
+                        profileimage.setImageResource(R.drawable.ic_profile_unselected);
+                        homeimage.setImageResource(R.drawable.ic_home_unselected);
+                        break;
+                    case 2:
+                        middleImage.setImageResource(R.drawable.ic_search_unselected);
+                        profileimage.setImageResource(R.drawable.ic_profile_selected);
+                        homeimage.setImageResource(R.drawable.ic_home_unselected);
+                        break;
+                }
             }
 
             @Override

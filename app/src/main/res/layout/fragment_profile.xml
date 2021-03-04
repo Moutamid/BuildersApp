@@ -10,7 +10,6 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center_horizontal"
-
         android:layout_marginTop="60dp"
         android:src="@drawable/ic_profile_image" />
 
@@ -18,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="20dp"
         android:text="Moutamid"
         android:textSize="30sp" />
 
@@ -27,27 +26,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp">
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="38dp"
             android:layout_marginLeft="38dp"
+            android:background="#00ffffff"
             android:text="Aukaat"
             android:textSize="22sp" />
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="38dp"
             android:layout_marginRight="38dp"
+            android:background="#00ffffff"
             android:text="20k $"
             android:textColor="#32ce62"
             android:textSize="22sp"
@@ -71,23 +72,25 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp">
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="38dp"
             android:layout_marginLeft="38dp"
+            android:background="#00ffffff"
             android:text="Salary"
             android:textSize="22sp" />
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="38dp"
             android:layout_marginRight="38dp"
+            android:background="#00ffffff"
             android:text="6000 $"
             android:textColor="#32ce62"
             android:textSize="22sp"
@@ -110,23 +113,25 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp">
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="38dp"
             android:layout_marginLeft="38dp"
+            android:background="#00ffffff"
             android:text="Entities"
             android:textSize="22sp" />
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="38dp"
             android:layout_marginRight="38dp"
+            android:background="#00ffffff"
             android:text="200k+ $"
             android:textColor="#32ce62"
             android:textSize="22sp"
