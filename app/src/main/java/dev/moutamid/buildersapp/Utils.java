@@ -6,9 +6,11 @@ import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AlertDialog;
 
+import java.util.Random;
+
 public class Utils {
 
-//    private static final String USER_EMAIL = "userEmail";
+    //    private static final String USER_EMAIL = "userEmail";
 //    private static final String USER_ID = "userReferralCode";
 //    private static final String USER_GENDER = "userGender";
 //    private static final String USER_NUMBER = "userNumber";
@@ -42,30 +44,30 @@ public class Utils {
         sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getBoolean(name, false);
     }
-//
-//    public void storeInteger(Context context1, String name, int value) {
-//        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
-//        sharedPreferences.edit().putInt(name, value).apply();
-//    }
-//
-//    public int getStoredInteger(Context context1, String name) {
-//        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
-//        return sharedPreferences.getInt(name, 0);
-//    }
-//
-//    public void storeFloat(Context context1, String name, float value) {
-//        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
-//        sharedPreferences.edit().putFloat(name, value).apply();
-//    }
-//
-//    public float getStoredFloat(Context context1, String name) {
-//        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
-//        return sharedPreferences.getFloat(name, 0);
-//    }
-//
-//    public String getRandomNmbr(int length) {
-//        return String.valueOf(new Random().nextInt(length) + 1);
-//    }
+
+    public void storeInteger(Context context1, String name, int value) {
+        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
+        sharedPreferences.edit().putInt(name, value).apply();
+    }
+
+    public int getStoredInteger(Context context1, String name) {
+        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt(name, 0);
+    }
+
+    public void storeFloat(Context context1, String name, float value) {
+        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
+        sharedPreferences.edit().putFloat(name, value).apply();
+    }
+
+    public float getStoredFloat(Context context1, String name) {
+        sharedPreferences = context1.getSharedPreferences(PACKAGE_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getFloat(name, 0);
+    }
+
+    public String getRandomNmbr(int length) {
+        return String.valueOf(new Random().nextInt(length) + 1);
+    }
 
 //    public void showOfflineDialog(Context context, String title, String desc) {
 //

@@ -10,8 +10,8 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
+//import com.daimajia.androidanimations.library.Techniques;
+//import com.daimajia.androidanimations.library.YoYo;
 
 public class MainActivity extends AppCompatActivity {
 

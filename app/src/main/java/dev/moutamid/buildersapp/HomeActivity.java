@@ -99,15 +99,15 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        viewPager = findViewById(R.id.homeViewpager);
-        adapter = new OnBoardingActivity.ViewPagerFragmentAdapter(getSupportFragmentManager());
-
         // Setting up the view Pager
         setupViewPager(viewPager);
     }
 
-
     private void setupViewPager(ViewPager viewPager) {
+
+        viewPager = findViewById(R.id.homeViewpager);
+        adapter = new OnBoardingActivity.ViewPagerFragmentAdapter(getSupportFragmentManager());
+
 
         // Adding Fragments to Adapter
         adapter.addFragment(new HomeFragment());
@@ -164,6 +164,29 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    public static class ViewPagerFragmentAdapter extends FragmentStatePagerAdapter {
+
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+
+        public void addFragment(Fragment fragment) {
+            mFragmentList.add(fragment);
+        }
+
+        public ViewPagerFragmentAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+    }
+
     public static class NonSwipableViewPager extends ViewPager {
 
 
@@ -210,29 +233,4 @@ public class HomeActivity extends AppCompatActivity {
             }
         }
     }
-
-    public static class ViewPagerFragmentAdapter extends FragmentStatePagerAdapter {
-
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-
-        public void addFragment(Fragment fragment) {
-            mFragmentList.add(fragment);
-        }
-
-        public ViewPagerFragmentAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-    }
-
-
 }
